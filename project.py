@@ -24,7 +24,7 @@ class Chatbot:
         elif user_input == '3':
             self.write_post()
         elif user_input == '4':
-            pass
+            self.message_friend()
         else :
             exit() 
 
@@ -55,6 +55,16 @@ class Chatbot:
         if self.loggeing == True:
             post = input("write your post here --->")
             print(f"your post has been posted {post}")
+        else:
+            print("please log in first")
+        print("\n")
+        self.main()
+
+    def message_friend(self):
+        if self.loggeing == True:
+            frd= input("enter your friend's name here --->")
+            msg= input("enter your message here --->")
+            print(f"your message has been sent to {frd} and the message is {msg}")
         else:
             print("please log in first")
         print("\n")
