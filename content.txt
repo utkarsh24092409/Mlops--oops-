@@ -1,0 +1,4 @@
+
+1. class and object  
+2. data attributes and method /function 
+3. why is python called object oriented programming language   
