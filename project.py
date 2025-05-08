@@ -15,14 +15,14 @@ class Chatbot:
                        2. press 2 to login
                        3. press 3 write a post 
                        4. press 4 to message a friend 
-                    5. press 5 to exit ''')
+                       5. press 5 to exit ''')
         
         if user_input == "1":
             self.signup()
         elif user_input == '2':
             self.login()
         elif user_input == '3':
-            pass
+            self.write_post()
         elif user_input == '4':
             pass
         else :
@@ -50,6 +50,17 @@ class Chatbot:
                 print("please enter the correct username and password")
         print("\n")
         self.main()
+
+    def write_post(self):
+        if self.loggeing == True:
+            post = input("write your post here --->")
+            print(f"your post has been posted {post}")
+        else:
+            print("please log in first")
+        print("\n")
+        self.main()
+
+
 
 obj  = Chatbot()
             
