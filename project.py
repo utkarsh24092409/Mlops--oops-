@@ -1,12 +1,40 @@
 ##project 
 
 class Chatbot:
+
+
+    __user_id = 0
+
+
     def __init__(self):
         self.username = ""
+        self.__username = "Utkarsh Bhalwankar"
+        self.id = Chatbot.__user_id
+        Chatbot.__user_id += 1
         self.password = ""
         self.loggeing = False 
 
-        self.main()
+
+
+
+    @staticmethod
+    def get_users_id():
+        return Chatbot.__user_id
+    
+    @staticmethod
+    def set_users_id(user_id):
+        Chatbot.__user_id = user_id
+
+
+
+
+
+
+    def get_username(self):
+        return self.__username
+    
+    def set_name(self, name):
+        self.__username = name
 
 
     def main(self):
@@ -72,6 +100,6 @@ class Chatbot:
 
 
 
-obj  = Chatbot()
+# obj  = Chatbot()
             
         
